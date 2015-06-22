@@ -26,6 +26,7 @@
     if( config.maxLength ){
       this.updateCount = $.proxy(this.updateCount, this)
       this.$el.on('keyup change cut paste drop', this.updateCount)
+      this.updateCount.call();
     }
   }
 
